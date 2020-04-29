@@ -1,0 +1,18 @@
+<section id="global-carousels">
+    <h1 class="heading">Global configuration of carousels</h1>
+    <fr-carousel>
+        <ng-template FrSlide *ngFor="let image of images">
+          <img class="img-fluid" [src]="image">
+        </ng-template>
+    </fr-carousel>
+    <button class="btn-code" (click)="show = !show" [innerText]="!show ?'show code' : 'hide code'"></button>
+    <div style="position: relative;" [class.d-none]="!show">
+      <h3>Html</h3>
+      <fr-lumos [code]="html"></fr-lumos>
+      <h3>Css</h3>
+      <fr-lumos [code]="css" [language]="'css'"></fr-lumos>
+      <h3>Typescript</h3>
+      <fr-lumos [code]="typescript" [language]="'typescript'"></fr-lumos>
+    </div>
+  </section>
+  

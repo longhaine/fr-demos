@@ -1,0 +1,25 @@
+<div class="container">
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-list__item" (click)="smoothScroll('carousel-default')">Carousel Default</li>
+            <li class="nav-list__item" (click)="smoothScroll('carousel-with-controls')">Carousel with controls</li>
+            <li class="nav-list__item" (click)="smoothScroll('global-carousels')">Global configuration of carousels</li>
+            <li class="nav-list__item" (click)="smoothScroll('installation')">Installation</li>
+        </ul>
+    </nav>
+    <section style="padding-bottom: 100px;">
+        <app-carousel-default></app-carousel-default>
+        <app-carousel-navigations></app-carousel-navigations>
+        <app-carousel-config></app-carousel-config>
+        <section id="installation">
+            <h1 class="heading">Installation</h1>
+            <h3 class="heading skinny-boi">npm install fr-carousel --save</h3>
+            <a  class="heading" href="https://github.com/longhaine/fr-carousel" target="_blank" style="margin-right: 30px;">
+                GitHub
+            </a>
+            <a class="heading" href="https://www.npmjs.com/package/fr-carousel" target="_blank">
+                Npm
+            </a>
+        </section>
+    </section>
+</div>

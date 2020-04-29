@@ -1,0 +1,40 @@
+<section id="carousel-with-controls">
+    <h1 class="heading">Carousel with controls</h1>
+    <fr-carousel #carousel [interval]="interval" [pauseOnHover]="pauseOnHover" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+        <ng-template FrSlide *ngFor="let image of images">
+          <img class="img-fluid" [src]="image">
+        </ng-template>
+    </fr-carousel>
+    <div class="control">
+        <input type="checkbox" [(ngModel)]="showNavigationArrows">
+        <span>Toggle navigation arrows</span>
+    </div>
+    <div class="control">
+        <input type="checkbox" [(ngModel)]="showNavigationIndicators">
+        <span>Toggle navigation indicators</span>
+    </div>
+    <div class="control">
+        <input type="checkbox" [(ngModel)]="pauseOnHover">
+        <span>Pause on hover</span>
+    </div>
+    <div class="control">
+        <span>Interval: </span>
+        <input type="number" [(ngModel)]="interval">
+        <p class="note">Note: if the value is less than 500 then it will be set as 500.</p>
+    </div>
+    <div class="control">
+        <button (click)="prev()">Prev</button>
+        <button (click)="next()">Next</button>
+        <button (click)="togglePause()" [innerText]="!pause ? 'Pause' : 'Cycle'"></button>
+    </div>
+    <button class="btn-code" (click)="show = !show" [innerText]="!show ?'show code' : 'hide code'"></button>
+    <div [class.d-none]="!show">
+      <h3>Html</h3>
+      <fr-lumos [code]="html"></fr-lumos>
+      <h3>Css</h3>
+      <fr-lumos [code]="css" [language]="'css'"></fr-lumos>
+      <h3>Typescript</h3>
+      <fr-lumos [code]="typescript" [language]="'typescript'"></fr-lumos>
+    </div>
+</section>
+  
