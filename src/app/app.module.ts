@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CarouselComponent } from './carousel/carousel.component';
-import {FrLumosModule} from 'dist/fr-lumos';
+import {FrLumosModule} from 'fr-lumos';
 import { FrCarouselModule } from 'fr-carousel';
 import { HttpClientModule} from '@angular/common/http';
 import { CarouselDefaultComponent } from './carousel/carousel-default/carousel-default';
